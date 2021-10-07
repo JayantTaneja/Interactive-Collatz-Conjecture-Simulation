@@ -2,6 +2,7 @@ import streamlit as st
 from graph import c, plot
 
 #Page Config 
+st.set_page_config(page_title="Interactive Collatz")
 st.title("Interactive Collatz Conjecture Simulation")
 
 st.write("Choose the starting point of this Graph from the side bar to the left $\leftarrow$")
