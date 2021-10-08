@@ -45,7 +45,7 @@ def plot(chart, speed, y):
         time.sleep(speed)
 
     
-    d={"Iteration":[i+1 for i in range(len(y))], "Value":y}
+    d={"Iteration":[i+1 for i in range(len(y))], "Value":[int(i) for i in y]}
     
     with st.expander("Show Details"):
         
