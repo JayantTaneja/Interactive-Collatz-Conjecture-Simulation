@@ -22,10 +22,10 @@ def plot(chart, speed, y):
         speed=0.001
     
     elif speed=="Medium":
-        speed=0.1
+        speed=0.5
             
     else:
-        speed=2
+        speed=1
     iterat=st.text("No of iterations : 0")
     progress_bar = st.progress(0)
     status_text = st.empty()
