@@ -47,9 +47,9 @@ def plot(chart, speed, y):
     
     d={"Iteration":[i+1 for i in range(len(y))], "Value":y}
     
-    col1, col2, col3,col4 = st.columns([1.5, 1, 1, 1])
     with st.expander("Show Details"):
         
+        col1, col2, col3,col4 = st.columns([1.5, 1, 1, 1])
         with col1:
             st.dataframe(pd.DataFrame(d,index=[i for i in range(len(y))]))
         
