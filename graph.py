@@ -44,6 +44,7 @@ def plot(chart, speed, y):
     d={"Iteration":[i+1 for i in range(len(y))], "Value":y}
     with st.expander("Show Details"):
         st.dataframe(pd.DataFrame(d,index=[i for i in range(len(y))]))
-    time.sleep(10)
-    progress_bar.empty()
-    status_text.empty()
+    
+    #time.sleep(10)
+    #progress_bar.empty()
+    #status_text.empty()
