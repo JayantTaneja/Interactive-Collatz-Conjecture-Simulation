@@ -1,6 +1,6 @@
 import streamlit as st
 import time, pandas as pd
-
+import numpy as np
 def c(n):    
     ans=[]
     ans.append(n)
@@ -46,8 +46,23 @@ def plot(chart, speed, y):
 
     
     d={"Iteration":[i+1 for i in range(len(y))], "Value":y}
+    
+    col1, col2, col3,col4 = st.columns([1.5, 1, 1, 1])
     with st.expander("Show Details"):
-        st.dataframe(pd.DataFrame(d,index=[i for i in range(len(y))]))
+        
+        with col1:
+            st.dataframe(pd.DataFrame(d,index=[i for i in range(len(y))]))
+        
+        with col2:
+            st.write("Max value           : ")
+            st.write(max(y))
+
+        with col3:
+            st.write("Variance            : ")
+            st.write(np.std(y)**2)
+        with col4:
+            st.write("Standard Deviation  : ")
+            st.write(np.std(y))
     
     #time.sleep(10)
     #progress_bar.empty()
