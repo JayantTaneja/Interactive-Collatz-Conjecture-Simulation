@@ -20,6 +20,10 @@ def c(n):
 def plot(chart, speed, y):
     if speed=="Fast":
         speed=0.001
+    
+    elif speed=="Medium":
+        speed=0.1
+            
     else:
         speed=2
     iterat=st.text("No of iterations : 0")
