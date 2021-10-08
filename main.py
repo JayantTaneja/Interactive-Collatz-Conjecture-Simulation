@@ -8,7 +8,7 @@ st.title("Interactive Collatz Conjecture Simulation")
 st.write("Choose the starting point of this Graph from the side bar to the left $\leftarrow$")
 
 #Default Plot
-chart=st.line_chart(c(5))
+chart=st.line_chart(c(1))
 
 st.write("Try zooming in or out by scrolling over the graph")
 
