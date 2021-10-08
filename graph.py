@@ -22,7 +22,7 @@ def plot(chart, speed, y):
         speed=0.001
     
     elif speed=="Medium":
-        speed=0.5
+        speed=0.25
             
     else:
         speed=1
