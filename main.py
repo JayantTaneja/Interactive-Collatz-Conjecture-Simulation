@@ -13,7 +13,7 @@ chart=st.line_chart(c(1))
 st.write("Try zooming in or out by scrolling over the graph")
 
 #Sidebar
-n = st.sidebar.slider(label="starting point", min_value=2, max_value=100, value=5, help="Sets where to start the animation")
+n = st.sidebar.slider(label="starting point", min_value=2, max_value=1000, value=5, help="Sets where to start the animation")
 speed = st.sidebar.select_slider(label="Animation Speed", value="Medium", options=["Slow", "Medium" ,"Fast"], help="Choose to Speed Of Animation")
 begin=st.sidebar.button(label="Plot")
 
