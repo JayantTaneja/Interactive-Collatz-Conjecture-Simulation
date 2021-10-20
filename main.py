@@ -1,24 +1,37 @@
 import streamlit as st
-from graph import c, plot
-
+from graph import c, plot, plot2
+import plotly.express as px
+import pandas as pd
 #Page Config 
 st.set_page_config(page_title="Interactive Collatz")
 st.title("Interactive Collatz Conjecture Simulation")
 
 st.write("Choose the starting point of this Graph from the side bar to the left $\leftarrow$")
 
-#Default Plot
-chart=st.line_chart(c(1))
+#Default Plot [Streamlit]
+#chart=st.line_chart(c(1))
 
-st.write("Try zooming in or out by scrolling over the graph")
+#st.write("Try zooming in or out by scrolling over the graph")
+
+#Default Plot [Plotly]
+
+d = pd.DataFrame(dict(
+    Iterations=[0,],
+    Value=[0,]
+))
+
+fig = px.line(d, x="Iterations", y="Value")
+
+chart = st.plotly_chart(fig, use_container_width=True)
 
 #Sidebar
 n = st.sidebar.slider(label="starting point", min_value=2, max_value=1000, value=5, help="Sets where to start the animation")
 speed = st.sidebar.select_slider(label="Animation Speed", value="Medium", options=["Slow", "Medium" ,"Fast"], help="Choose to Speed Of Animation")
 begin=st.sidebar.button(label="Plot")
 
+
 if begin:
-    plot(chart,speed, c(n))
+    plot2(fig, chart, c(n), speed)
     
 st.write("\n")
 st.markdown('''
