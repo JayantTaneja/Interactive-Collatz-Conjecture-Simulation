@@ -113,7 +113,7 @@ def plot2(fig, chart, y ,speed):
     
     with st.expander("Show Details"):
         
-        col1, col2, col3,col4 = st.columns([1.5, 1, 1, 1])
+        col1, col2, col3,col4 = st.columns([1.5, 1, 1, 1.5])
         with col1:
             st.dataframe(pd.DataFrame(d,index=[i for i in range(len(y))]))
         
